@@ -1,0 +1,13 @@
+<div class="blog-detail">
+    <div class="vl-title">{{blogDetail.title}}</div>
+    <hr>
+    <div class="form-group">
+        <small>By {{blogDetail.createdBy}} * {{blogDetail.createdOnDate}}</small>
+    </div>
+    <div class="form-group vl-image">
+        <img class="img-responsive" src="{{blogDetail.avatar}}"/>
+    </div>
+    <div class="vl-content">
+        <div [innerHTML]="blogDetail.content"></div>
+    </div>
+</div>

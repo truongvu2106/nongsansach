@@ -1,0 +1,349 @@
+body {
+  font-family: Arial, Tahoma, Verdana, serif;
+}
+a {
+  cursor: pointer;
+  color: #67c356;
+}
+#vl-app {
+  /*.vl-modal-dialog img {
+    width: 100%;
+    max-height: calc(100% - 150px);
+    transition: all 2s ease-in-out;
+}*/
+}
+#vl-app .vl-padding-top {
+  padding-top: 20px;
+}
+#vl-app .vl-list .vl-item {
+  margin-bottom: 40px;
+}
+#vl-app .vl-list .vl-image {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 .5em;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+}
+#vl-app .vl-list .vl-image img {
+  width: 100%;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -ms-transition: -ms-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3D(0, 0, 0);
+}
+#vl-app .vl-list .vl-image:hover img {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+#vl-app .vl-banner {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+#vl-app .vl-banner img {
+  z-index: -1;
+  width: 100%;
+  min-height: 100%;
+}
+#vl-app .vl-banner .vl-banner-caption {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  color: #FFFFFF;
+}
+#vl-app .vl-banner .vl-banner-caption h1 {
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  font-size: 6em;
+}
+#vl-app .vl-block {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background-color: #FFFFFF;
+}
+#vl-app .vl-block:nth-child(odd) {
+  background-color: #f1ffe4;
+}
+#vl-app .vl-block .vl-title {
+  font-size: 2.2em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#vl-app .vl-block .vl-description {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+#vl-app .vl-btn {
+  border: none;
+  border-radius: 0;
+  height: 49px;
+  min-height: 23px;
+  width: 214px;
+  max-width: 100%;
+}
+#vl-app .vl-btn-red {
+  color: #fff;
+  background-color: #f16876;
+}
+#vl-app .vl-btn-blue {
+  color: #fff;
+  background-color: #3B58B8;
+  border: 1px solid #3B58B8;
+}
+#vl-app .contact-btn {
+  line-height: 110px;
+}
+#vl-app .vl-title {
+  font-size: 1.6em;
+}
+#vl-app .vl-content {
+  font-size: 16px;
+}
+#vl-app .vl-navbar {
+  margin: 0;
+}
+#vl-app .vl-navbar .vl-navbar-nav li a {
+  color: #67c356;
+}
+#vl-app .vl-navbar .vl-navbar-nav li a.active,
+#vl-app .vl-navbar .vl-navbar-nav li a:focus,
+#vl-app .vl-navbar .vl-navbar-nav li a:hover {
+  background-color: #67c356;
+  color: #FFFFFF;
+}
+#vl-app .vl-navbar .vl-logo {
+  font-family: "Vast Shadow";
+  color: #67c356;
+}
+#vl-app .vl-navbar .vl-navbar-text {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#vl-app .vl-navbar .vl-navbar-text img {
+  height: 32px;
+}
+#vl-app #admin {
+  padding: 20px;
+}
+#vl-app #admin .vl-control-group-btn a {
+  margin-left: 15px;
+  text-decoration: none;
+}
+#vl-app #admin .vl-toolbar {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#vl-app #admin .vl-nav-tabs {
+  margin-bottom: 15px;
+}
+#vl-app #admin #blog .vl-image {
+  height: 100px;
+}
+#vl-app #blog textarea {
+  width: 100%;
+}
+#vl-app #blog .vl-control-group-btn a {
+  margin-left: 15px;
+  text-decoration: none;
+}
+#vl-app #blog .blog-detail .vl-image {
+  height: 240px;
+  overflow: hidden;
+}
+#vl-app #blog .blog-detail .vl-image img {
+  height: auto;
+}
+#vl-app .vl-modal-header {
+  height: 50px;
+}
+#vl-app .vl-modal-footer {
+  padding: 10px 10px 10px;
+}
+#vl-app .vl-image-container {
+  overflow: hidden;
+}
+#vl-app .vl-image-container img {
+  width: 100%;
+  -webkit-transition: all 0.5s 0s ease-in-out;
+  transition: all 0.5s 0s ease-in-out;
+}
+#vl-app .vl-image-container img {
+  transform: translate3d(0, 0, 0);
+}
+#vl-app .vl-image-container img.left {
+  transform: translate3d(-100%, 0, 0);
+}
+#vl-app .vl-image-container img.right {
+  transform: translate3d(100%, 0, 0);
+}
+#vl-app .dtl-login {
+  width: 320px;
+  margin: auto;
+}
+#vl-app .dtl-login .dtl-btn-facebook {
+  background: #3b5998;
+  color: #fff;
+  opacity: 0.9;
+}
+#vl-app .dtl-login .dtl-btn-google {
+  background: #c32f10;
+  color: #fff;
+  opacity: 0.9;
+}
+#vl-app .dtl-login .dtl-loginOr {
+  position: relative;
+  font-size: 1.5em;
+  color: #aaa;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+#vl-app .dtl-login .dtl-loginOr .dtl-hrOr {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+#vl-app .dtl-login .dtl-loginOr .dtl-spanOr {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -0.6em;
+  margin-left: -1.5em;
+  background-color: white;
+  width: 3em;
+  text-align: center;
+}
+#vl-app .vl-home img {
+  width: 100%;
+}
+#vl-app .vl-home .vl-banner {
+  height: 500px;
+}
+#vl-app .vl-home .vl-banner .vl-banner-caption {
+  color: #FFFFFF;
+  top: 150px;
+}
+#vl-app .vl-home .vl-banner .vl-banner-caption h1 {
+  font-size: 6em;
+  font-weight: bold;
+}
+#vl-app .vl-home .vl-banner .vl-banner-caption h3 {
+  font-size: 3em;
+}
+#vl-app .vl-home .vl-list {
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+#vl-app .vl-home .vl-list .vl-slick-item {
+  margin: 10px;
+}
+#vl-app .vl-home .vl-list .vl-slick-item img {
+  height: 150px;
+  width: 100%;
+}
+#vl-app .vl-home .vl-list .vl-slick-item .vl-slick-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-weight: 600;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+@media (max-width: 768px) {
+  #vl-app .vl-home .vl-banner {
+    height: 300px;
+  }
+  #vl-app .vl-home .vl-banner .vl-banner-caption {
+    top: 50px;
+  }
+  #vl-app .vl-home .vl-banner .vl-banner-caption h1 {
+    font-size: 4em;
+  }
+  #vl-app .vl-home .vl-banner .vl-banner-caption h3 {
+    font-size: 2em;
+  }
+  #vl-app .vl-home .vl-block img {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  #vl-app .vl-home .vl-banner .vl-banner-caption {
+    top: 0px;
+  }
+  #vl-app .vl-home .vl-banner .vl-banner-caption h1 {
+    font-size: 2.8em;
+  }
+  #vl-app .vl-home .vl-banner .vl-banner-caption h3 {
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 768px) {
+  #vl-app .body {
+    top: 50px;
+  }
+  #vl-app footer {
+    bottom: -50px;
+  }
+  #vl-app .vl-block {
+    text-align: center;
+  }
+  #vl-app .vl-block .vl-title {
+    font-size: 1.8em;
+  }
+  #vl-app .vl-block .vl-description {
+    font-size: 1.2em;
+  }
+  #vl-app .vl-block img {
+    width: 90%;
+  }
+  #vl-app .vl-banner .vl-banner-caption {
+    top: 0px;
+  }
+}
+/****************************************
+* facebook chat box
+*****************************************/
+.fb-message-box {
+  background: #67c356;
+  position: fixed;
+  right: 8px;
+  bottom: 6px;
+  top: auto !important;
+  z-index: 9999;
+  overflow: hidden;
+  width: 310px;
+  color: #fff !important;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.fb-message-box .vl-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px !important;
+  font-family: Arial;
+  color: #fff !important;
+  margin: 0!important;
+  background-color: #67c356;
+  cursor: pointer;
+}
+.fb-message-box i {
+  background-color: #D9534F;
+  padding: 15px 15px 12px 15px;
+  margin-right: 15px;
+}
+/****************************************
+* end facebook chat box
+*****************************************/

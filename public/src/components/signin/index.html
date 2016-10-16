@@ -1,0 +1,57 @@
+<div class="row dtl-login">
+    <form>
+        <h2 class="text-center">
+            Sign in
+        </h2>
+        <div class="form-group row">
+            <div class="col-xs-6">
+                <a href="#" (click)="socialSignin('facebook')" class="btn btn-lg btn-block dtl-btn-facebook">
+                    <i class="fa fa-facebook visible-xs"></i>
+                    <span class="hidden-xs">Facebook</span>
+                </a>
+            </div>
+            <div class="col-xs-6">
+                <a href="#" (click)="socialSignin('google')" class="btn btn-lg btn-block dtl-btn-google">
+                    <i class="fa fa-google-plus visible-xs"></i>
+                    <span class="hidden-xs">Google+</span>
+                </a>
+            </div>
+        </div>
+        <div class="row dtl-loginOr">
+            <div class="col-xs-12">
+                <hr class="dtl-hrOr">
+                <span class="dtl-spanOr">or</span>
+            </div>
+        </div>
+        <p class="text-danger" *ngIf="signInError">Invalid username and/or password.</p>
+        <div class="form-group">
+            <label for="email" class="sr-only">Email address</label>
+            <input id="email"
+                [(ngModel)]="credentials.username"
+                class="form-control"
+                type="text"
+                name="username"
+                placeholder="Email Address"
+                required
+                ngDefaultControl />
+        </div>
+
+        <div class="form-group">
+            <label for="password" class="sr-only">Password</label>
+            <input id="password"
+                [(ngModel)]="credentials.password"
+                class="form-control"
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+                ngDefaultControl />
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block"
+                type="submit"
+                (click)="signIn()">Sign In</button>
+        </div>
+    </form>
+</div>

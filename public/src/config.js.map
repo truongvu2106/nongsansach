@@ -1,0 +1,1 @@
+{"version":3,"sources":["config.ts"],"names":[],"mappings":";AAAa,cAAM,GAAG;IAClB,MAAM,EAAE,uCAAuC;IAC/C,cAAc,EAAE,6BAA6B;CAChD,CAAA","file":"config.js","sourcesContent":["export const Config = {\n    apiURI: 'https://nongsansach.herokuapp.com/api',\n    oauthPublicKey: 'PKl7wLlml1vCjJ9M_VY-vkLJ_Zo'\n}"]}

@@ -1,0 +1,29 @@
+<div id="blog" class="col-sm-12">
+    <div class="menu-control vl-toolbar" role="toolbar">
+        <a [routerLink]="['/admin/blog', 'add']" class="btn btn-sm btn-primary">
+            <i class="glyphicon glyphicon-plus"></i>
+        </a>
+    </div>
+    <hr>
+    <div *ngFor="let item of blogs">
+        <a class="vl-title" [routerLink]="['/admin/blog', 'view', item._id]">{{item.title}}</a>
+        <div class="pull-right vl-control-group-btn">
+            <a [routerLink]="['/admin/blog', 'edit', item._id]">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a>
+            <a (click)="delete(item._id)">
+                <i class="glyphicon glyphicon-trash"></i>
+            </a>
+        </div>
+        <p class="text-right"><small>{{item.createdOnDate}}</small></p>
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                <img class="img-responsive vl-image" src="{{item.avatar}}"/>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10">
+                <p>{{item.summary}}</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

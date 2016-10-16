@@ -1,0 +1,57 @@
+<div class="vl-home">
+    <div class="vl-banner">
+        <img class="img-responsive" src="https://i.ytimg.com/vi/3gzfSNvKQhM/maxresdefault.jpg" />
+        <div class="vl-banner-caption text-center">
+        </div>
+    </div>
+    <div class="vl-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 class="vl-title"> Sản phẩm </h1>
+                    <div class="vl-description">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img src="http://en.dangcongsan.vn/DATA/3/2015/12/ruongbacthangmucangtrai_21215-11_22_06_112.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="vl-block">
+        <div class="container">
+            <h1 class="vl-title"> Tin tức </h1>
+            <div class="vl-list vl-data-slick">
+                <div class="vl-slick-item" *ngFor="let item of blogs">
+                    <a [routerLink]="[ '/blog', item._id ]">
+                        <img src="{{item.avatar}}"/>
+                        <span class="vl-slick-caption">{{item.title}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="vl-block">
+        <div class="container">
+            <div class="col-sm-6 text-center">
+                <img src="http://a9.vietbao.vn/images/vn905/Tong_Hop/50870404_8.jpg" />
+            </div>
+            <div class="col-sm-6">
+                <h1 class="vl-title"> Đội ngũ nhân viên </h1>
+                <div class="vl-description">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</div>
+            </div>
+        </div>
+    </div>
+    <div class="vl-block">
+        <div class="container contact">
+            <div class="col-md-9 col-sm-12">
+                <h1 class="vl-title"> Liên hệ </h1>
+                <div class="vl-description">
+                    <p>Để biết thêm chi tiết xin liên hệ:</p>
+                    <p><strong>Giám đốc:</strong> Nguyễn Văn Tuấn</p>
+                    <p><strong>Số điện thoại:</strong> 0973611482 hoặc 0934768736</p>
+                    <p><strong>E-mail:</strong> nguyenvantuan169@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

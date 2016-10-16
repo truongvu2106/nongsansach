@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" content="53317374944-h135qid1cglujv5fg2j752lcs9g5shj7.apps.googleusercontent.com">
+    <meta property="fb:pages" content="294202047633709" />
+
+    <title>Nông sản sạch</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Vast+Shadow" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/ckeditor/ckeditor.js"></script>
+    <script src="bower_components/oauth.io/dist/oauth.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <!-- 1. Load libraries -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- Remove when build bundle file -->
+    <!-- 2. Configure SystemJS -->
+    <!-- <script src="systemjs.config.js"></script>
+    <script>
+      System.import("app").catch(function(err) { console.error(err); });
+    </script> -->
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <vl-app id="vl-app">
+      <h1 class="text-center">
+        <i class="fa fa-spinner fa-pulse fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+      </h1>
+    </vl-app>
+    <div id="fb-root"></div>
+
+    <div class="fb-message-box">
+        <div class="vl-title"><i class="fa fa-weixin"></i>Gửi tin nhắn cho chúng tôi</div>
+        <div class="fb-message">
+            <div
+                class="fb-page"
+                data-href="https://www.facebook.com/gaoquelethuy"
+                data-small-header="true"
+                data-height="310"
+                data-width="310"
+                data-tabs="messages"
+                data-adapt-container-width="false"
+                data-hide-cover="false"
+                data-show-facepile="false"
+                data-show-posts="false">
+            </div>
+        </div>
+    </div>
+
+    <!-- Load bundle file -->
+    <script src="bundle.js"></script>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      jQuery(function ($) {
+        $('.fb-message').hide();
+        $('.fb-message-box .vl-title').click(function(e) {
+          e.stopPropagation();
+          $('.fb-message').slideToggle();
+        });
+        $('.fb-message').click(function(e) {
+          e.stopPropagation();
+        });
+        $(document).click(function(){
+          $('.fb-message').slideUp();
+        });
+      });
+    </script>
+
+  </body>
+</html>
