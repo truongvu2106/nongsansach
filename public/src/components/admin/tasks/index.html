@@ -1,5 +1,5 @@
 <div class="vl-tasks">
-    <div [class.col-md-6]="taskSelected._id">
+    <div [class.col-md-6]="taskSelected && taskSelected._id">
         <table class="table table-striped">
             <thead>
               <tr>
@@ -24,20 +24,32 @@
               </tr>
             </tbody>
         </table>
+        <div class="form-group text-center">
+        </div>
+        <div class="input-group col-sm-4 col-md-3">
+            <input class="form-control" placeholder="Enter task name" #taskname />
+            <span class="input-group-btn">
+                <button class="btn btn-success" type="button" (click)="createTask(taskname.value); taskname.value = ''">Add</button>
+            </span>
+        </div>
     </div>
-    <div class="col-md-6 vl-task-detail" *ngIf="taskSelected._id">
+    <div class="col-md-6 vl-task-detail" *ngIf="taskSelected && taskSelected._id">
         <button type="button" class="close" (click)="taskSelected={}"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <h3 class="text-success" contenteditable="true" [textContent]="taskSelected.name" (input)="taskSelected.name=$event.target.textContent" (blur)="autoSave()"></h3>
         <div class="row">
             <div class="col-sm-7">
                 <div class="form-group row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <label>Priority: </label>
                         <span contenteditable="true" [textContent]="taskSelected.priority" (input)="taskSelected.priority=$event.target.textContent" (blur)="autoSave()"> </span>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <label>Status: </label>
                         <span contenteditable="true" [textContent]="taskSelected.status" (input)="taskSelected.status=$event.target.textContent" (blur)="autoSave()"> </span>
+                    </div>
+                    <div class="col-sm-4">
+                        <label>Story Point: </label>
+                        <span contenteditable="true" [textContent]="taskSelected.storyPoint" (input)="taskSelected.storyPoint=$event.target.textContent" (blur)="autoSave()"> </span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -73,6 +85,10 @@
                 </div>
                 <div class="form-group form-inline">
                     <label>Remaining (h): </label> {{ taskSelected.estimate - taskSelected.logged }}
+                </div>
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-danger" (click)="deleteTask(taskSelected._id)">Delete</button>
+                </div>
             </div>
         </div>
     </div>
