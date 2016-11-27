@@ -17,9 +17,5 @@ var config = {
  * @returns {Object}
  */
 module.exports = (function() {
-  var env = process.env.NODE_ENV || 'development';
-  if (!config[env])
-    throw new Error('NODE_ENV is either not set or is not valid.');
-  else
-    return config[env];
+  return config['development'];
 })();

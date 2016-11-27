@@ -47,25 +47,7 @@
         <span class="sr-only">Loading...</span>
       </h1>
     </vl-app>
-    <!-- <div id="fb-root"></div>
-
-    <div class="fb-message-box">
-        <div class="vl-title"><i class="fa fa-weixin"></i>Send us a message on Facebook</div>
-        <div class="fb-message">
-            <div
-                class="fb-page"
-                data-href="https://www.facebook.com/L%C3%BAa-G%E1%BA%A1o-Mi%E1%BB%81n-Trung-1195821510475342"
-                data-small-header="true"
-                data-height="320"
-                data-width="320"
-                data-tabs="messages"
-                data-adapt-container-width="false"
-                data-hide-cover="false"
-                data-show-facepile="false"
-                data-show-posts="false">
-            </div>
-        </div>
-    </div>
+    <div id="fb-root"></div>
 
     <script>
       (function(d, s, id) {
@@ -75,21 +57,19 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-
-      jQuery(function ($) {
-        $('.fb-message').hide();
-        $('.fb-message-box .vl-title').click(function(e) {
-          e.stopPropagation();
-          $('.fb-message').slideToggle();
-        });
-        $('.fb-message').click(function(e) {
-          e.stopPropagation();
-        });
-        $(document).click(function(){
-          $('.fb-message').slideUp();
-        });
-      });
-    </script> -->
+    </script>
+    <div class="vl-fb-actions">
+        <div class="fb-like"
+            data-href="https://iturn.herokuapp.com"
+            data-layout="button_count"
+            data-action="like"
+            data-show-faces="true">
+        </div>
+        <div class="fb-share-button"
+          data-href="https://iturn.herokuapp.com"
+          data-layout="button_count">
+        </div>
+    </div>
     <!-- Load bundle file -->
     <script src="bundle.js"></script>
 

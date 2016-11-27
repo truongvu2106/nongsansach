@@ -5,6 +5,11 @@ a {
   cursor: pointer;
   color: #67c356;
 }
+.vl-fb-actions {
+  position: fixed;
+  right: 2px;
+  top: 53px;
+}
 #vl-app {
   /*.vl-modal-dialog img {
     width: 100%;
@@ -13,7 +18,7 @@ a {
 }*/
 }
 #vl-app .vl-padding-top {
-  padding-top: 20px;
+  padding-top: 22px;
 }
 #vl-app .vl-list .vl-item {
   margin-bottom: 40px;
