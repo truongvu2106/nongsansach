@@ -1,0 +1,79 @@
+<div class="vl-tasks">
+    <div [class.col-md-6]="taskSelected._id">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Priority</th>
+                <th>Type</th>
+                <th width="40%">Summary</th>
+                <th>Status</th>
+                <th>Assignee</th>
+                <th class="text-center">Story Point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let task of tasks; let i = index" (click)="taskSelected=task">
+                <td>{{ i + 1 }}</td>
+                <td>{{ task.priority }}</td>
+                <td>{{ task.type }}</td>
+                <td><a>{{ task.name }}</a></td>
+                <td>{{ task.status }}</td>
+                <td>{{ task.owner }}</td>
+                <td class="text-center">{{ task.storyPoint }}</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6 vl-task-detail" *ngIf="taskSelected._id">
+        <button type="button" class="close" (click)="taskSelected={}"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="text-success" contenteditable="true" [textContent]="taskSelected.name" (input)="taskSelected.name=$event.target.textContent" (blur)="autoSave()"></h3>
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label>Priority: </label>
+                        <span contenteditable="true" [textContent]="taskSelected.priority" (input)="taskSelected.priority=$event.target.textContent" (blur)="autoSave()"> </span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Status: </label>
+                        <span contenteditable="true" [textContent]="taskSelected.status" (input)="taskSelected.status=$event.target.textContent" (blur)="autoSave()"> </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description: </label>
+                    <textarea autosize class="form-control contenteditable" [(ngModel)]="taskSelected.description" placeholder="Click to add description"
+                    (blur)="autoSave()"> </textarea>
+                </div>
+                <div class="form-group">
+                    <label>Note: </label>
+                    <textarea autosize class="form-control contenteditable" [(ngModel)]="taskSelected.note" placeholder="Click to add note" (blur)="autoSave()"> </textarea>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group form-inline">
+                    <label>Assignee: </label>
+                    <input class="form-control contenteditable" [(ngModel)]="taskSelected.owner" (blur)="autoSave()"/>
+                </div>
+                <div class="form-group form-inline">
+                    <label>Start Date: </label>
+                    <span contenteditable="true" [textContent]="taskSelected.startDate | date" (input)="taskSelected.startDate=$event.target.textContent" (blur)="autoSave()"> </span>
+                </div>
+                <div class="form-group form-inline">
+                    <label>End Date: </label>
+                    <span contenteditable="true" [textContent]="taskSelected.endDate | date" (input)="taskSelected.endDate=$event.target.textContent" (blur)="autoSave()"> </span>
+                </div>
+                <div class="form-group form-inline">
+                    <label>Estimate (h): </label>
+                    <input type="number" class="form-control contenteditable" [(ngModel)]="taskSelected.estimate" (blur)="autoSave()"/>
+                </div>
+                <div class="form-group form-inline">
+                    <label>Logged (h): </label>
+                    <input type="number" class="form-control contenteditable" [(ngModel)]="taskSelected.logged" (blur)="autoSave()"/>
+                </div>
+                <div class="form-group form-inline">
+                    <label>Remaining (h): </label> {{ taskSelected.estimate - taskSelected.logged }}
+            </div>
+        </div>
+    </div>
+</div>

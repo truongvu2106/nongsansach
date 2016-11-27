@@ -1,5 +1,5 @@
 <div class="row vl-list">
-    <div class="col-xs-12 col-sm-6 col-md-4 vl-item" *ngFor="let item of blogs">
+    <div class="col-sm-6 vl-item" *ngFor="let item of blogs">
         <div class="form-group vl-image">
             <a [routerLink]="[ '/blog', item._id ]">
                 <img class="img-responsive" src="{{item.avatar}}"/>
@@ -9,7 +9,7 @@
             <a [routerLink]="[ '/blog', item._id ]">{{item.title}}</a>
         </div>
         <div class="text-muted">
-            <small>By {{item.createdBy}} * {{item.createdOnDate}}</small>
+            <small>By {{item.createdBy}} * {{item.createdOnDate | date}}</small>
         </div>
     </div>
 </div>

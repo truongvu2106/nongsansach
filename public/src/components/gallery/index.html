@@ -1,0 +1,10 @@
+<div class="vl-gallery vl-list container vl-padding-top">
+    <div class="vl-image" *ngFor="let image of images; let i = index">
+        <a (click)="viewer.open(i, images)">
+            <img src="{{ image.thumbnail || image.path }}"/>
+        </a>
+    </div>
+</div>
+<image-viewer #viewer ></image-viewer>
+
+

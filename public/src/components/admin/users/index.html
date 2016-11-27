@@ -20,7 +20,7 @@
         <td><img class="img-responsive" src="{{item.avatar}}"/></td>
         <td><a [routerLink]="['/admin/users', 'view', item._id]">{{item.username || item.email}}</a></td>
         <td>{{item.name || (item.firstName + ' ' + item.lastName)}}</td>
-        <td>{{item.createdOnDate}}</td>
+        <td>{{item.createdOnDate | date}}</td>
         <td>
             <div class="text-center mn-control-group-btn">
                 <a [routerLink]="['/admin/users', 'edit', item._id]">

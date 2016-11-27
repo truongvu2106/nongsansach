@@ -1,15 +1,15 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <h4>Nông sản sạch</h4>
+        <h4>POPULAR POSTS</h4>
         <hr>
-        <div class="list-unstyled vl-list">
-            <div *ngFor="let item of blogs" class="form-group">
-                <div class="vl-image">
+        <div class="list-unstyled">
+            <div *ngFor="let item of blogs" class="row form-group">
+                <div class="col-xs-3">
                     <img class="img-responsive" src="{{item.avatar}}"/>
                 </div>
-                <div>
+                <div class="col-xs-9">
                     <div><a [routerLink]="[ '/blog', item._id ]">{{item.title}}</a></div>
-                    <small class="text-muted">{{item.createdOnDate}}</small>
+                    <small class="text-muted">{{item.createdOnDate | date}}</small>
                 </div>
             </div>
         </div>

@@ -1,0 +1,40 @@
+<div>
+    <!-- Add an album -->
+    <form name="blogForm" class="form">
+        <div class="form-group">
+            <input type="text"
+                id="title"
+                name="title"
+                [(ngModel)]="album.title"
+                class="form-control"
+                placeholder="Album name"
+                required />
+        </div>
+
+        <div class="form-group">
+          <label class="btn btn-primary">
+            <input type="file"
+                  class="hidden"
+                  ngFileSelect
+                  multiple="true"
+                  [options]="options"
+                  [events]="uploadEvents"
+                  (onUpload)="handleMultipleUpload($event)"
+                  (onPreviewData)="handlePreviewData($event)">
+            Select files
+          </label>
+        </div>
+
+        <div *ngIf="previewData" class="form-group row">
+          <div *ngFor="let item of previewData" class="col-xs-6 col-sm-4 col-md-3" style="height: 150px">
+            <img [src]="item" class="img-thumbnail vl-image">
+          </div>
+        </div>
+
+        <progressbar [value]="progress" type="success"><b>{{progress}}%</b></progressbar>
+
+        <div class="form-group text-right">
+          <button class="btn btn-success" (click)="startUpload()">Start Upload</button>
+        </div>
+    </form>
+</div>

@@ -8,18 +8,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand vl-logo" href="/">Nongsansach.com</a>
+      <a class="navbar-brand vl-logo" href="#">iTurn</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav vl-navbar-nav">
-        <li><a routerLink="/home" routerLinkActive="active"> Trang chủ </a></li>
-        <li><a routerLink="/about-us" routerLinkActive="active"> Giới thiệu </a></li>
-        <li><a routerLink="/blog" routerLinkActive="active"> Sản phẩm </a></li>
-        <li *ngIf="authenticated && currentUser.roles.indexOf('admin') > -1"><a routerLink="/admin" routerLinkActive="active"> Quản trị </a></li>
+<!--         <li><a routerLink="/home" routerLinkActive="active"> Home </a></li>
+        <li><a routerLink="/about-us" routerLinkActive="active"> About Us </a></li>
+        <li><a routerLink="/blog" routerLinkActive="active"> Blog </a></li> -->
+        <li><a routerLink="/gallery" routerLinkActive="active"> Gallery </a></li>
+        <li *ngIf="authenticated && currentUser.roles.indexOf('admin') > -1"><a routerLink="/admin" routerLinkActive="active"> Administration </a></li>
       </ul>
+
       <ul class="nav navbar-nav navbar-right">
+        <!-- <li *ngIf="!authenticated">
+          <a routerLink="/signin"> Log in </a>
+        </li> -->
         <li *ngIf="authenticated">
           <p class="vl-navbar-text">
             <img src="{{currentUser.avatar}}" class="img-circle">

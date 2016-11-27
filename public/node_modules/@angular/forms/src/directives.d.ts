@@ -16,6 +16,7 @@ export { NgModel } from './directives/ng_model';
 export { NgModelGroup } from './directives/ng_model_group';
 export { NumberValueAccessor } from './directives/number_value_accessor';
 export { RadioControlValueAccessor } from './directives/radio_control_value_accessor';
+export { RangeValueAccessor } from './directives/range_value_accessor';
 export { FormControlDirective } from './directives/reactive_directives/form_control_directive';
 export { FormControlName } from './directives/reactive_directives/form_control_name';
 export { FormGroupDirective } from './directives/reactive_directives/form_group_directive';
@@ -26,28 +27,6 @@ export { MaxLengthValidator, MinLengthValidator, PatternValidator, RequiredValid
 export declare const SHARED_FORM_DIRECTIVES: Type<any>[];
 export declare const TEMPLATE_DRIVEN_DIRECTIVES: Type<any>[];
 export declare const REACTIVE_DRIVEN_DIRECTIVES: Type<any>[];
-/**
- *
- * A list of all the form directives used as part of a `@Component` annotation.
- *
- *  This is a shorthand for importing them each individually.
- *
- * ### Example
- *
- * ```typescript
- * @Component({
- *   selector: 'my-app',
- *   directives: [FORM_DIRECTIVES]
- * })
- * class MyApp {}
- * ```
- * @stable
- */
-export declare const FORM_DIRECTIVES: Type<any>[][];
-/**
- * @stable
- */
-export declare const REACTIVE_FORM_DIRECTIVES: Type<any>[][];
 /**
  * Internal module used for sharing directives between FormsModule and ReactiveFormsModule
  */

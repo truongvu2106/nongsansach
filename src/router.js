@@ -4,11 +4,9 @@
 var express = require("express");
 
 var accountRouter = require('./account/account-router');
-var articleRouter = require('./article/article-router');
-var messageRouter = require('./message/message-router');
-var fileRouter = require('./file/file-router');
 var authenticationRouter = require('./authentication/authentication-router');
-var albumRouter = require('./album/album-router');
+var imagesRouter = require('./images/images-router');
+var taskRouter = require('./task/task-router');
 
 /**
  * Map routes for API resources.
@@ -17,10 +15,8 @@ var albumRouter = require('./album/album-router');
 exports.init = function init() {
     var router = express.Router();
     accountRouter.init(router);
-    articleRouter.init(router);
-    messageRouter.init(router);
-    fileRouter.init(router);
     authenticationRouter.init(router);
-    albumRouter.init(router);
+    taskRouter.init(router);
+    imagesRouter.init(router);
     return router;
 };

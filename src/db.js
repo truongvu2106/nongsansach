@@ -12,10 +12,12 @@ var extend = require('mongoose-schema-extend');
  */
 
 exports.init = function(uri) {
-  mongoose.connect(uri);
-  mongoose.connection.on('error', console.error.bind(console, 'Database connection error: '));
-  mongoose.connection.on('connected', function() {
-    console.log('Database connection successful');
-  });
-  return mongoose.connection;
+    mongoose.connect(uri);
+    mongoose.connection.on('error', console.error.bind(console, 'Database connection error: '));
+
+    mongoose.connection.on('connected', function() {
+        mongoose.Promise = global.Promise;
+        console.log('Database connection successful');
+    });
+    return mongoose.connection;
 };
